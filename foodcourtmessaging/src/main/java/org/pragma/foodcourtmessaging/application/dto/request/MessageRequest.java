@@ -11,4 +11,5 @@ public class MessageRequest{
 
     private String phoneNumber;
     private String message;
+
 }

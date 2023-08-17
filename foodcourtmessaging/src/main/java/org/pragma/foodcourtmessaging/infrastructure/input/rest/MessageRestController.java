@@ -20,7 +20,7 @@ public class MessageRestController{
     @PostMapping(value = "/")
     public ResponseEntity<String> sendSMS(@RequestBody MessageRequest messageRequest) {
         messageHandler.sendMessage(messageRequest);
-        return new ResponseEntity<String>("Message sent successfully", HttpStatus.OK);
+        return new ResponseEntity<String>("Mensaje enviado existosamente", HttpStatus.OK);
     }
 
 
