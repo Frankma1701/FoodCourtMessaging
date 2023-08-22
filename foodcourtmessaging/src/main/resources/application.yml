@@ -11,5 +11,5 @@ jwt:
 
 twilio:
   account-sid: AC08c58450018c11e9158d0fccb08749af
-  auth-token: 29660323ddaca062d4cb6e4e52c927b9
+  auth-token: e44c4d1d9870f69e616ab2646c4b2de2
   phone: +18143348092

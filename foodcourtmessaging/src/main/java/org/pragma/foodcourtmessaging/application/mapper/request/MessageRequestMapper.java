@@ -11,5 +11,4 @@ import org.pragma.foodcourtmessaging.domain.model.MessageNotification;
         unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface MessageRequestMapper{
     MessageNotification toMessage(MessageRequest messageRequest);
-    MessageRequest toMessageRequest(MessageNotification message);
 }

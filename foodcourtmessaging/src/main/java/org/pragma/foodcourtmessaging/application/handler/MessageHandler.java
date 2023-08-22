@@ -1,8 +1,4 @@
 package org.pragma.foodcourtmessaging.application.handler;
-
-import com.twilio.Twilio;
-import com.twilio.rest.api.v2010.account.Message;
-import com.twilio.type.PhoneNumber;
 import lombok.RequiredArgsConstructor;
 import org.pragma.foodcourtmessaging.application.dto.request.MessageRequest;
 import org.pragma.foodcourtmessaging.application.mapper.request.MessageRequestMapper;
@@ -19,7 +15,8 @@ public class MessageHandler implements IMessageHandler{
 
     @Override
     public MessageNotification sendMessage (MessageRequest messageRequest){
-        MessageNotification message = iMessageServicePort.sendMessage(messageRequestMapper.toMessage(messageRequest));
-        return message;
+        return iMessageServicePort.sendMessage(messageRequestMapper.toMessage(messageRequest));
     }
+
+
 }

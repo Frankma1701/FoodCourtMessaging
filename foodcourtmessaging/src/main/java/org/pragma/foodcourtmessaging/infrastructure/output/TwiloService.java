@@ -9,17 +9,17 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class TwiloService implements IMessagePersistencePort{
 
-    @Value("${twilo.account-sid}")
+    @Value("${twilio.account-sid}")
     private String ACCOUNT_SID;
 
-    @Value("${twilo.auth-token}")
+    @Value("${twilio.auth-token}")
     private String AUTH_TOKEN;
 
-    @Value("${twilo.phone}")
-    private String PHONE;
+    @Value("${twilio.phone}")
+    private static String PHONE;
     @Override
     public MessageNotification sendMessage (MessageNotification message){
-        Twilio.init(ACCOUNT_SID,AUTH_TOKEN );
+        Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
         Message.creator(new PhoneNumber(message.getPhoneNumber()),
                 new PhoneNumber(PHONE),
                 message.getMessage()).create();

@@ -19,7 +19,7 @@ public class BeanConfiguration{
     }
 
     @Bean
-    public IMessageServicePort messageServicePort (){
+    public IMessageServicePort messageServicePort(){
         return new MessageUseCase(messagePersistencePort());
     }
 }

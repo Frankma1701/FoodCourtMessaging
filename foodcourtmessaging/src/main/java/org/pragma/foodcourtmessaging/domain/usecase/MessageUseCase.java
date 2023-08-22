@@ -6,7 +6,7 @@ import org.pragma.foodcourtmessaging.domain.spi.IMessagePersistencePort;
 
 public class MessageUseCase implements IMessageServicePort{
 
-    private IMessagePersistencePort iMessagePersistencePort;
+    private final IMessagePersistencePort iMessagePersistencePort;
 
     public MessageUseCase (IMessagePersistencePort iMessagePersistencePort){
         this.iMessagePersistencePort = iMessagePersistencePort;
