@@ -29,7 +29,7 @@ public class SecurityConfiguration{
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/message/**").hasRole("EMPLOYEE")
-
+                        .requestMatchers("/message/").hasRole("EMPLOYEE")
                         .anyRequest().denyAll()
                 );
         return httpSecurity.build();

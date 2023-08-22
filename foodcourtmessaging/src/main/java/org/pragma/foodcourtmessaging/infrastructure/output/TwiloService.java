@@ -16,7 +16,7 @@ public class TwiloService implements IMessagePersistencePort{
     private String AUTH_TOKEN;
 
     @Value("${twilio.phone}")
-    private static String PHONE;
+    private String PHONE;
     @Override
     public MessageNotification sendMessage (MessageNotification message){
         Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
